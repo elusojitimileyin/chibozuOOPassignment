@@ -42,10 +42,10 @@ class AirConditionerTest {
         assertTrue(myAirconditioner.isOn());
 
         myAirconditioner.increaseTemperature();
-        assertEquals(16, myAirconditioner.getTemperature());
-        myAirconditioner.increaseTemperature();
-        myAirconditioner.increaseTemperature();
         assertEquals(17, myAirconditioner.getTemperature());
+
+        myAirconditioner.increaseTemperature();
+        assertEquals(18, myAirconditioner.getTemperature());
 
     }
 
@@ -76,6 +76,9 @@ class AirConditionerTest {
     public void decreaseAcTemperatureAt16_temperatureIs16Test() {
         myAirconditioner.setOn(true);
         assertTrue(myAirconditioner.isOn());
+
+        myAirconditioner.decreaseTemperature();
+        assertEquals(16, myAirconditioner.getTemperature());
 
         myAirconditioner.decreaseTemperature();
         assertEquals(16, myAirconditioner.getTemperature());

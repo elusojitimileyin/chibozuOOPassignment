@@ -31,24 +31,32 @@ class AutomaticBikeTest {
     @Test
     void bikeAccelerationTest(){
         myAutomaticBike.setBikeOn(true);
-        assertTrue(myAutomaticBike.isBikeOn());
+        myAutomaticBike.setSpeed(0);
         myAutomaticBike.accelerateSpeed();
+
+        assertEquals(1,myAutomaticBike.getSpeed());
 
     }
 
     @Test
     void bikeDecelerationTest(){
         myAutomaticBike.setBikeOn(true);
-        assertTrue(myAutomaticBike.isBikeOn());
+        myAutomaticBike.setSpeed(20);
         myAutomaticBike.decelerateSpeed();
-        assertEquals(10, myAutomaticBike.getSpeed());
 
+        assertEquals(19,myAutomaticBike.getSpeed());
     }
 
     @Test
       void bikeGearIncreaseByOneTest(){
         myAutomaticBike.setBikeOn(true);
-        assertTrue(myAutomaticBike.isBikeOn());
+        myAutomaticBike.setSpeed(14);
+        myAutomaticBike.accelerateSpeed();
+        myAutomaticBike.accelerateSpeed();
+        myAutomaticBike.accelerateSpeed();
+
+        assertEquals(17,myAutomaticBike.getSpeed());
+        assertEquals(1,myAutomaticBike.getGear());
 
 
     }
