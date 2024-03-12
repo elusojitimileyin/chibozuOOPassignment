@@ -1,9 +1,9 @@
 package chapterThree;
 
 public class Problem {
-    private String name;
+    private final String name;
     private boolean isSolved = false;
-    private Type type ;
+    private final Type type ;
 
     public Problem(String name, Type type ) {
         this.name = name;

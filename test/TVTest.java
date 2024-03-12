@@ -9,6 +9,7 @@ class TVTest {
 
     @BeforeEach
     void installTV(){
+
         myTV = new TV();
     }
 
@@ -27,4 +28,32 @@ class TVTest {
         assertTrue(myTV.isTvIsOff());
     }
 
+    @Test
+    void tvIsOnTest_setChannel(){
+        myTV.setTvIsOff(true);
+        assertTrue(myTV.isTvIsOff());
+        myTV.setTvIsOn(true);
+        assertTrue(myTV.isTvIsOn());
+        myTV.setChannel(12);
+        assertEquals(12, myTV.getChannel());
+    }
+
+    @Test
+    void tvIsOnTest_setVolume(){
+        myTV.setTvIsOff(true);
+        assertTrue(myTV.isTvIsOff());
+        myTV.setTvIsOn(true);
+        assertTrue(myTV.isTvIsOn());
+        myTV.setVolume(50);
+        assertEquals(50, myTV.getVolume());
+    }
+    @Test
+    void tvIsOnTest_(){
+        myTV.setTvIsOff(true);
+        assertTrue(myTV.isTvIsOff());
+        myTV.setTvIsOn(true);
+        assertTrue(myTV.isTvIsOn());
+        myTV.setChannel(12);
+        assertEquals(12, myTV.getChannel());
+    }
 }
