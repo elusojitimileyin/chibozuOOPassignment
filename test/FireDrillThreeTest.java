@@ -14,12 +14,7 @@ class FireDrillThreeTest {
 
 
     }
-    @Test
-    public void printVerticalScoreTest(){
-        FireDrillThree myFireDrill = new FireDrillThree();
 
-
-    }
 
 
 }
