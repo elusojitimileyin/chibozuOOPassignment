@@ -1,4 +1,5 @@
 
+import Revision.AirConditioner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +10,7 @@ class AirConditionerTest {
     private AirConditioner myAirconditioner;
 
     @BeforeEach
-    void intializeAC() {
+    void initializeAC() {
         myAirconditioner = new AirConditioner();
     }
 
